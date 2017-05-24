@@ -34,6 +34,13 @@
 		$("#member_logo").css("cursor","pointer").click(function() {
 			$(location).attr('href',url);
 		});
+		
+		// 로그인 엔터누르면 로그인 버튼 활성화
+		$("#lgnPw").keydown(function (key) {
+	        if(key.keyCode == 13){ // 키가 13이면 실행 (엔터는 13) 
+	        	loginChk();
+	        }
+	    });
 	});
 	
 	<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
@@ -56,7 +63,7 @@
 			</div>
 			<br>
 			<div>
-				<input type="password" name="lgnPw" size="40" placeholder="Password">
+				<input type="password" id="lgnPw" name="lgnPw" size="40" placeholder="Password">
 			</div>
 			<br><br>
 			<input id="login_button" type="button" value="l o g i n" onclick="loginChk();">
