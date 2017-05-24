@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="${_ctx}/res/css/styles.css">
 <link rel="stylesheet" href="${_ctx}/res/css/main.css">
 <link rel="stylesheet" href="${_ctx}/res/css/header.css">
+<link rel="shortcut icon" href="${_ctx}/res/img/favicon.ico">
 
 <script type="text/javascript" src="${_ctx}/res/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="${_ctx}/res/js/jquery.min.js"></script>
