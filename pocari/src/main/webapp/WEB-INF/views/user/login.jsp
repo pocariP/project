@@ -35,6 +35,13 @@
 			$(location).attr('href',url);
 		});
 	});
+	
+	<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+		alert("${SPRING_SECURITY_LAST_EXCEPTION.message}");
+		history.pushState(null, null, location.origin + location.pathname);
+		<c:remove var = "SPRING_SECURITY_LAST_EXCEPTION" scope = "session" />
+	</c:if>
+
 </script>
 
 </head>
