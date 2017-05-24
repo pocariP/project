@@ -8,19 +8,28 @@
 <script>
 	
 </script>
-
 <style>
-
-#sub_menu {
-	width: 50px;
-	height: 50px;
-	background-color: gg;
-	display: inline-block;
+#sub_nav {
+	border:1px solid black;
 }
-</style>
 
+</style>
 </head>
 <body>
-	<div id="sub_menu">dd11</div>
+	<nav id="sub_nav">
+		<ul class="sub_main">
+			<li class="sub_menu">
+				<a href="#">메뉴</a>
+				<ul class="sub_menuList">
+					<li><a href="#">회원정보 수정</a></li>
+					<li><a href="#">내가 쓴 글</a></li>
+				</ul>
+			</li> 
+		</ul> 
+	</nav>
+
 </body>
+</html>
+
+
 </html>
