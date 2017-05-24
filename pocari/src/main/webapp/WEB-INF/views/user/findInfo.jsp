@@ -333,6 +333,7 @@ function modalSubmit() { // 모달창에서 변경할 비밀번호 가져오는 
 					<br>
 <!-- 					변경 할 비밀번호 담기 -->
 					<input type="hidden" value="" name="lgnPw" id="editPw">
+<!-- 					이메일 하나로 합친후 담기 -->
 					<input type="hidden" value="" name="email" id="editEmail">
 					<input type="button" id="info_btn" onclick="infoPwChk()" class="openMask" value="비밀번호 찾기">
 					<input type="reset" id="resetPw" style="display: none;">
