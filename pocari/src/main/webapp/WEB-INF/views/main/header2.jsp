@@ -24,7 +24,7 @@
 		<nav id="main_meun">
 						<ul>
 						<li>
-							<a href="/pocari/main/index">마이페이지</a>
+							<a href="${_ctx}/sub/myPage">마이페이지</a>
 						</li>
 						<li>|</li>
 						<li>
