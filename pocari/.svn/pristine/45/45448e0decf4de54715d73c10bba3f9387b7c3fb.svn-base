@@ -1,0 +1,22 @@
+package kr.co.pocari.common.dao.support;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public class BaseDaoSupport extends SqlSessionDaoSupport {
+
+	@Override
+	@Autowired(required = false)
+	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
+// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		super.setSqlSessionFactory(sqlSessionFactory);
+	}
+
+	@Override
+	@Autowired(required = false)
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+		super.setSqlSessionTemplate(sqlSessionTemplate);
+	}
+}

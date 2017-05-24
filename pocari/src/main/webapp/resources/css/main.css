@@ -1,0 +1,149 @@
+/* index page */
+
+.home {
+	width:100%;
+	height:100%;
+	background-image: url( "/pocari/res/img/main_img1.png" );
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.home {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+
+/* footer {
+	border-top: 2px solid rgba(0, 0, 0, .1);
+} */
+
+/* .home-wrapper {
+	height: 200%;
+}
+ */
+
+.home .inner {
+	width: 100%;
+	min-width: 750px;
+	transition: opacity .3s linear;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 22.5%;
+	text-align: center;
+}
+
+.home h1 {
+	font-size: 70px;
+	font-weight: 100;
+	margin: 0;
+	letter-spacing: -1px;
+}
+
+.home h1 .text-fix {
+	letter-spacing: 2px;
+}
+
+/* .home p {
+	font-size: 32px;
+	text-align: center;
+	letter-spacing: .06vmax;
+	margin:100px;
+}
+ */
+
+.home .start {
+	font-size: 20px;
+	padding: 1.452vh 2.96vw;
+	border-radius: 40px;
+	border: 1.3px solid #121416;
+	cursor: pointer;
+	margin-top: 100px;
+	text-decoration:none;
+	color:#000000;
+	font-weight: bold;
+	transition: all .3s ease-out;
+}
+
+.home .start:hover {
+	text-decoration: none;
+	background: #3899EC;
+	border-color: #3899EC;
+	color: #fff;
+}
+
+@media ( max-width :1100px) {
+	.home h1 {
+		font-size: 44px;
+	}
+	.home .start {
+		font-size: 14px;
+	}
+	.home p {
+		font-size: 25px;
+	}
+	
+}
+
+/* =======================index2 page====================== */
+
+div#main_tool {
+	width: 100%;
+	height: auto;
+	background-color: #444;
+	color: white;
+	text-align: center;
+}
+div#main_tool p, div#main_tool a{
+	display: inline-block;
+}
+div#main_tool p{
+	margin: 0;
+	padding: 50px 30px;
+	font-size: 20px;
+	font-weight: bold;
+}
+div#main_tool a{
+	text-decoration: none;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #df3e7b;
+	padding: 6px 17px;
+	font-weight: bold;
+}
+div#main_search {
+	width: 100%;
+	height: auto;
+	text-align: right;
+}
+div#main_search input[type="text"] {
+	margin: 10px 5px;
+	padding: 5px 0;
+}
+div#main_search input[type="button"] {
+	margin-right: 20px;
+	padding: 5px 15px;
+	border: none;
+	background-color: #df3e7b;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: bold;
+}
+div#main_wrap {
+	width: 100%;
+	height: auto;
+	padding: 80px 0;
+	background-color: #c0c0c0;
+	text-align: center;
+}
+div#main_wrap div.main_wrap_info {
+	width: 200px;
+	height: 200px;
+	margin: 50px;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #fff;
+}

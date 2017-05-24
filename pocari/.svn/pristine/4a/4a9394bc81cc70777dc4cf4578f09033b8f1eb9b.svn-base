@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+
+<!-- 회원가입 -->
+<insert id="insert" parameterType="kr.co.pocari.user.dto.UserDTO">
+	INSERT INTO TB_USER (
+		USER_ID, LGN_ID, LGN_PW, NAME, EMAIL, ROLE
+	) VALUES(
+		SEQ_USER.NEXTVAL, #{lgnId}, #{lgnPw}, #{name}, #{email}, #{role}
+	)
+</insert>
+
+<!-- 이메일 ',' 제거 -->
+<update id="emailTrim" parameterType="kr.co.pocari.user.dto.UserDTO">
+	UPDATE TB_USER 
+	SET EMAIL = REPLACE(#{email}, ',', '')
+	WHERE LGN_ID = #{lgnId}
+</update>
+
+<!-- 로그인 -->
+<select id="selectOneByLgnId" parameterType="String" resultType="kr.co.pocari.user.dto.UserDTO">
+	SELECT * 
+	FROM TB_USER 
+	WHERE LGN_ID=#{lgnId}
+</select>
+
+<!-- 아이디 찾기 -->
+<select id="selectFindId" parameterType="kr.co.pocari.user.dto.UserDTO" resultType="kr.co.pocari.user.dto.UserDTO">
+	SELECT *
+	FROM TB_USER
+	WHERE NAME = #{name}
+	  AND EMAIL = #{email}
+</select>
+
+<!-- 비밀번호 찾기 -->
+<select id="selectFindPw" parameterType="kr.co.pocari.user.dto.UserDTO"  resultType="kr.co.pocari.user.dto.UserDTO">
+	SELECT *
+	FROM TB_USER
+	WHERE NAME = #{name}
+	  AND EMAIL = #{email}
+	  AND LGN_ID = #{lgnId}
+</select>
+
+<!-- 비밀번호 변경 -->
+<select id="pwSelect" parameterType="kr.co.pocari.user.dto.UserDTO" resultType="kr.co.pocari.user.dto.UserDTO">
+	SELECT *
+	FROM TB_USER
+	WHERE LGN_PW = #{lgnPw}
+</select>
+
+<update id="pwUpdate" parameterType="kr.co.pocari.user.dto.UserDTO">
+	UPDATE TB_USER
+	SET LGN_PW = #{lgnPw}
+	WHERE NAME = #{name}
+		  AND EMAIL = #{email}
+		  AND LGN_ID = #{lgnId}
+</update>
+
+</mapper>

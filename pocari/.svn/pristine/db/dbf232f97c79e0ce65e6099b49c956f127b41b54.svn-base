@@ -1,0 +1,92 @@
+package kr.co.pocari.user.dto;
+
+import java.util.Date;
+
+public class UserDTO {
+	
+	private Integer userId;
+	private String lgnId;
+	private String lgnPw;
+	private String name;
+	private String email;
+	private String role = "USER";
+	private String status;
+	private Date regDt;
+
+	public UserDTO() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return "UserDTO [userId=" + userId + ", lgnId=" + lgnId + ", lgnPw=" + lgnPw + ", name=" + name + ", email="
+				+ email + ", role=" + role + ", status=" + status + ", regDt=" + regDt + "]";
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public String getLgnId() {
+		return lgnId;
+	}
+
+	public void setLgnId(String lgnId) {
+		this.lgnId = lgnId;
+	}
+
+	public String getLgnPw() {
+		return lgnPw;
+	}
+
+	public void setLgnPw(String lgnPw) {
+		this.lgnPw = lgnPw;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Date getRegDt() {
+		return regDt;
+	}
+
+	public void setRegDt(Date regDt) {
+		this.regDt = regDt;
+	}
+
+
+	
+}

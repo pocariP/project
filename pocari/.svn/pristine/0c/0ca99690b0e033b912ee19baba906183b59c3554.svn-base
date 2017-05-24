@@ -1,0 +1,35 @@
+package kr.co.pocari;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+/**
+ * Handles requests for the application home page.
+ */
+@Controller
+public class HomeController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home() {	
+		return "redirect:./main/index";
+	}
+	
+	@RequestMapping(value="/main/index", method=RequestMethod.GET)
+	public void index() {
+		logger.debug("==>index page");
+	}
+	
+	@RequestMapping(value="/main/index2", method=RequestMethod.GET)
+	public void index2() {
+		logger.debug("==>main page");
+	}
+	
+}
