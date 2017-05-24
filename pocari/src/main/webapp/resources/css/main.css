@@ -114,24 +114,7 @@ div#main_tool a{
 	padding: 6px 17px;
 	font-weight: bold;
 }
-div#main_search {
-	width: 100%;
-	height: auto;
-	text-align: right;
-}
-div#main_search input[type="text"] {
-	margin: 10px 5px;
-	padding: 5px 0;
-}
-div#main_search input[type="button"] {
-	margin-right: 20px;
-	padding: 5px 15px;
-	border: none;
-	background-color: #df3e7b;
-	color: #fff;
-	border-radius: 5px;
-	font-weight: bold;
-}
+
 div#main_wrap {
 	width: 100%;
 	height: auto;

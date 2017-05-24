@@ -10,13 +10,7 @@
 </head>
 <body>
 	<div>
-		<div id="main_tool">
-			<p>새로운 이야기를 전해주세요.</p><a href="${_ctx}/sub/write">글쓰기</a>
-		</div>
-		<div id="main_search">
-			<input type="text" placeholder="검색" size="30">
-			<input type="button" value="검색">
-		</div>
+
 		<div id="main_wrap">
 			<div class="main_wrap_info"></div>
 		</div>

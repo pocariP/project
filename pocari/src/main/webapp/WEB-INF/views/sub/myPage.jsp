@@ -6,28 +6,29 @@
 <c:import url="/WEB-INF/views/inc/head.jsp" />
 <%@ include file="../main/header2.jsp"%>
 <script>
-	
+	$(function(){
+		$(".sub_menu>a").click(function(){
+			$(this).next("ul").toggleClass("sub_menuList");
+		})
+	})
 </script>
 <style>
-#sub_nav {
-	border:1px solid black;
+
+#sub_contatin {
+	border:0px solid black;
+	height:400px;
+	margin:0 auto;
+	width:400px;
 }
 
 </style>
 </head>
 <body>
-	<nav id="sub_nav">
-		<ul class="sub_main">
-			<li class="sub_menu">
-				<a href="#">메뉴</a>
-				<ul class="sub_menuList">
-					<li><a href="#">회원정보 수정</a></li>
-					<li><a href="#">내가 쓴 글</a></li>
-				</ul>
-			</li> 
-		</ul> 
-	</nav>
-
+	<div id="sub_wrap">
+		<div id="sub_contatin">
+		</div>
+</div>
+<%@ include file="../main/footer.jsp" %>
 </body>
 </html>
 

@@ -19,7 +19,7 @@
 <header>
 	<div class="header">
 		<div id="header_logo">
-			<a href="#"><img src="/pocari/res/img/logo.png" alt="logo"></a>
+			<a href="${_ctx}/main/index2"><img src="/pocari/res/img/logo.png" alt="logo"></a>
 		</div>
 		<nav id="main_meun">
 						<ul>
@@ -37,6 +37,14 @@
 						</li>
 			</ul>
 			</nav>
+					<div id="main_tool">
+			<p>새로운 이야기를 전해주세요.</p><a href="${_ctx}/sub/write">글쓰기</a>
+		</div>
+		<div id="main_search">
+			<input type="text" placeholder="검색" size="30">
+			<!-- <input type="button" value="검색"> -->
+			<button id=""> </button>
+		</div>
 	</div>
 </header>
 </body>
