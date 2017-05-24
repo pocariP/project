@@ -48,7 +48,7 @@
 			var email = $("#email").val();
 			var email2 = $("#email2").val();
 			if (email2 == "") {
-				$("#emailChk").text("이메일을 입력해주세요.").css("color", "red").css();
+				$("#emailChk").text("이메일을 입력해주세요.").css("color", "red");
 			} else if (email == "") {
 				$("#emailChk").text("이메일을 입력해주세요.").css("color", "red");
 			} else {
