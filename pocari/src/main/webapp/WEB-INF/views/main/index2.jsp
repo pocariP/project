@@ -5,13 +5,55 @@
 <head>
  <c:import url="/WEB-INF/views/inc/head.jsp"/>
 <%@ include file="header2.jsp" %>
+<style>
+div#modalWrite {
+	display: none;
+	position: absolute;
+	left: 35%;
+	top: 30%;
+	z-index: 10000;
+	background-color: #fff;
+	width: 400px;
+	height: 400px;
+}
+div#modal_close {
+	display: inline-block;
+	float: right;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+	
+</style>
 <script>
+$(function() {
+	$("#modal_close").click(function(e) {
+		//링크 기본동작은 작동하지 않도록 한다.
+		e.preventDefault();
+		$("#mask, #modalWrite").hide();
+	});
+});
+
+function wrapWindowByMask() { // 모달창
+	//화면의 높이와 너비를 구한다.
+	var maskHeight = $(document).height();
+	var maskWidth = $(window).width();
+		
+	//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+	$('#mask').css({
+		'width' : maskWidth,
+		'height' : maskHeight
+	});
+	
+	$("#mask").fadeTo("slow", 0.8);
+	$("#modalWrite").fadeTo("slow", 1.0);
+}
 </script>
 </head>
 <body>
 	<div>
 		<div id="main_tool">
-			<p>새로운 이야기를 전해주세요.</p><a href="${_ctx}/sub/write">글쓰기</a>
+			<p>새로운 이야기를 전해주세요.</p><a onclick="wrapWindowByMask()">글쓰기</a>
 		</div>
 		<div id="main_search">
 			<input type="text" placeholder="검색" size="30">
@@ -22,5 +64,12 @@
 		</div>
 	</div>
 <%@ include file="footer.jsp" %>
+
+<!-- 글쓰기 모달창 -->
+	<div id="mask"></div>
+	<div id="modalWrite">
+		<div id="modal_close"><img src="${_ctx}/res/img/modalClose.png"/></div>
+	</div>
+
 </body>
 </html>
