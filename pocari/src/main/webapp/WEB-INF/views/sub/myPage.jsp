@@ -10,7 +10,8 @@
 
 <style>
 	#sub_menu {
-	
+	 border: 1px solid black;
+	 width:500px;
 	}
 
 </style>
@@ -18,7 +19,7 @@
 </head>
 <body>
 	<div id="sub_menu">
-	
+	dd
 	</div>
 </body>
 </html>
