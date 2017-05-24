@@ -331,6 +331,7 @@ function modalSubmit() { // 모달창에서 변경할 비밀번호 가져오는 
 						</select>
 					</div>
 					<br>
+<!-- 					변경 할 비밀번호 담기 -->
 					<input type="hidden" value="" name="lgnPw" id="editPw">
 					<input type="hidden" value="" name="email" id="editEmail">
 					<input type="button" id="info_btn" onclick="infoPwChk()" class="openMask" value="비밀번호 찾기">
@@ -351,8 +352,8 @@ function modalSubmit() { // 모달창에서 변경할 비밀번호 가져오는 
 					<span>비밀번호확인</span>
 				</div>
 				<div id="pw_modal_info_2">
-					<input type="password" id="pwd" name="lgnPw" size="37">
-					<input type="password" id="pwdChk" name="lgnPwChk" size="37">
+					<input type="password" id="pwd" name="lgnPw" size="37" maxlength="20">
+					<input type="password" id="pwdChk" name="lgnPwChk" size="37" maxlength="20">
 				</div>
 				<p id="pw_msg"></p>
 			</div>
