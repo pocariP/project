@@ -10,7 +10,7 @@
         <div class="main" id="main">
             <div class="contents">
                 <div class="inner">
-                    <h1>POCARI HOMEPAGE</h1>
+                    <h1>POCARI HOMEPAGE11</h1>
                     <a class="start" href="/pocari/main/index2">시작하기</a>
                 </div>
             </div>
