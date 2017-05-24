@@ -4,10 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<c:import url="/WEB-INF/views/inc/head.jsp"/>
+<c:import url="/WEB-INF/views/inc/head.jsp"/>
 <title>로그인</title>
-
- <script type="text/javascript">
+ <script>
 	function loginChk() {
 		var form = document.frm;
 		

@@ -3,10 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>아이디 찾기11</title>
-<link rel="stylesheet" href="/pocari/res/css/styles.css">
-<script type="text/javascript" src="/pocari/res/js/jquery.min.js"></script>
+<c:import url="/WEB-INF/views/inc/head.jsp"/>
+<title>아이디 찾기</title>
 <script>
 	$(function() {
 		
