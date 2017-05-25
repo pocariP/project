@@ -42,7 +42,7 @@ function wrapWindowByMask() { // 모달창
 	<div id="mask"></div>
 	<div id="modalWrite">
 		<div id="modal_close"><img src="${_ctx}/res/img/modalClose.png"/></div>
-		글쓰기
+		<div id="modal_write_img"></div>
 	</div>
 <!-- 글쓰기 모달창 끝 -->
 

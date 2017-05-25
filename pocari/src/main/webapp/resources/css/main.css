@@ -157,3 +157,14 @@ div#modal_close img {
 	width: 30px;
 	height: 30px;
 }
+
+div#modal_write_img {
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	right: 5%;
+	left: 5%;
+	width: 35%;
+	height: 80%;
+	background-color: #444;
+}
