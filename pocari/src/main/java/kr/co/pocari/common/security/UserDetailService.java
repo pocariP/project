@@ -29,14 +29,12 @@ public class UserDetailService implements UserDetailsService {
 	@Autowired private IUserService userServiceImpl = null;
 
 	public UserDetails loadUserByUsername(String lgnId) throws UsernameNotFoundException {
-		logger.debug("여기까진////탑니다//////");
 		UserDTO userDTO = null;
 		try{
 			logger.debug("id==>"+lgnId);
 			userDTO = userServiceImpl.viewByLgnId(lgnId);
 			
 			if( userDTO == null ) {
-				logger.debug("member is null =================>");
 				throw new BadCredentialsException("ID나 비밀번호가 잘못되었습니다.");
 			}
 		}catch(DataAccessException dae){
