@@ -35,7 +35,6 @@ public class UserDetailService implements UserDetailsService {
 			userDTO = userServiceImpl.viewByLgnId(lgnId);
 			
 			if( userDTO == null ) {
-				
 				throw new BadCredentialsException("ID나 비밀번호가 잘못되었습니다.");
 			}
 		}catch(DataAccessException dae){

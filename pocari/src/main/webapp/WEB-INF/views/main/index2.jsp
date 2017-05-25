@@ -5,26 +5,6 @@
 <head>
  <c:import url="/WEB-INF/views/inc/head.jsp"/>
 <%@ include file="header2.jsp" %>
-<style>
-div#modalWrite {
-	display: none;
-	position: absolute;
-	left: 35%;
-	top: 30%;
-	z-index: 10000;
-	background-color: #fff;
-	width: 400px;
-	height: 400px;
-}
-div#modal_close {
-	display: inline-block;
-	float: right;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-}
-	
-</style>
 <script>
 $(function() {
 	$("#modal_close").click(function(e) {
@@ -62,6 +42,7 @@ function wrapWindowByMask() { // 모달창
 	<div id="mask"></div>
 	<div id="modalWrite">
 		<div id="modal_close"><img src="${_ctx}/res/img/modalClose.png"/></div>
+		글쓰기
 	</div>
 <!-- 글쓰기 모달창 끝 -->
 
