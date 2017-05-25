@@ -24,6 +24,7 @@
 </style>
 </head>
 <body>
+<!-- mypage -->
 	<div id="sub_wrap">
 		<div id="sub_contatin">
 		</div>

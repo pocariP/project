@@ -25,7 +25,6 @@
   <intercept-url pattern="/user/findInfo" access="permitAll "/>
   <intercept-url pattern="/user/idResult" access="permitAll "/>
   <intercept-url pattern="/user/pwResult" access="permitAll "/>
-  <intercept-url pattern="/sub/myPage" access="permitAll "/>
   <intercept-url pattern="/user/pw/check" access="permitAll "/>
   <intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
   <form-login login-page="/user/login" 

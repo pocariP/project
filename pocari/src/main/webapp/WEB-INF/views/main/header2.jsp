@@ -15,7 +15,7 @@
 <link href="/pocari/res/css/header.css" rel="stylesheet">
 </head>
 <body style="margin: 0;">
-<!-- 해더 부분 시작 -->
+<!-- 해더 부분 시작1 -->
 <header>
 	<div class="header">
 		<div id="header_logo">
