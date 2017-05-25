@@ -80,4 +80,28 @@ nav#main_meun a {
 	color: #777;
 }
 
+div#main_search {
+	width: 100%;
+	height: auto;
+	text-align: right;
+}
+div#main_search input[type="text"] {
+	margin: 10px 5px;
+	padding-left:15px;
+	border-radius: 42px;
+	border: 2px solid #324b4e;
+  background: #F9F0DA;
+  outline: none;
+  height:30px;
+}
+div#main_search input[type="button"] {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: -2px;
+  right: 0;
+}
+
 

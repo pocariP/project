@@ -33,7 +33,7 @@
 		var url = "/pocari/main/index";
 		$("#member_logo").css("cursor","pointer").click(function() {
 			$(location).attr('href',url);
-		});
+		});		
 		
 		// 로그인 엔터누르면 로그인 버튼 활성화
 		$("#lgnPw").keydown(function (key) {
@@ -41,8 +41,7 @@
 	        	loginChk();
 	        }
 	    });
-	});
-	
+	});	
 	<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
 		alert("${SPRING_SECURITY_LAST_EXCEPTION.message}");
 		history.pushState(null, null, location.origin + location.pathname);
