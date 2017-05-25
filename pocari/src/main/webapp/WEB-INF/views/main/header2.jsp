@@ -33,7 +33,7 @@
 						<li>|</li>
 						<li>
 							${user.name}
-							님 안녕하세요!
+							님 안녕하세요.
 						</li>
 			</ul>
 			</nav>
@@ -42,8 +42,7 @@
 		</div>
 		<div id="main_search">
 			<input type="text" placeholder="검색" size="30">
-			<!-- <input type="button" value="검색"> -->
-			<button id=""> </button>
+			 <input type="button" value="검색">
 		</div>
 	</div>
 </header>
