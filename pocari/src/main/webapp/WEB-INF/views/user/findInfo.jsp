@@ -4,89 +4,6 @@
 <html>
 <head>
 <c:import url="/WEB-INF/views/inc/head.jsp"/>
-<style>
-#mask {
-	position: absolute;
-	z-index: 9000;
-	background-color: #000;
-	display: none;
-	left: 0;
-	top: 0;
-}
-
-.window {
-	display: none;
-	position: absolute;
-	left: 35%;
-	top: 30%;
-	z-index: 10000;
-}
-
-div#pw_modal {
-	width: 600px;
-	height: 350px;
-	border-radius: 40px;
-	background-color: #fff;
-	padding: 30px;
-}
-
-div#pw_modal h2 {
-	margin-top: 40px;
-	margin-left: 50px;
-	color: #538CB8;
-}
-
-div#result_main_btn{
-	text-align: center;
-}
-
-div#result_main_btn input{
-	background-color: #F0DDA0;
-	border: none;
-	width: 120px;
-	height: 30px;
-	color: #CC8755;
-	font-size: 14px;
-	border-radius: 5px;
-}
- p#pw_msg {
-	color: red;
-	margin-left: 120px;
-	font-weight: normal;
-}
-	
-div#result_main_btn input{
-	padding: 0 10px;
-	background-color: #F0DDA0;
-	color: #CC8755;
-	border: none;
-	border-radius: 5px;
-}
-
-div#pw_modal_info {
-	border: 1px solid #999;
-	margin: 30px 30px;
-	padding: 40px 60px;
-}
-
-div#pw_modal_info_1 {
-	display: inline-block;
-	line-height: 30px;
-	margin-top: 10px;
-}
-
-div#pw_modal_info_2 {
-	display: inline-block;
-	width: 300px;
-	line-height: 30px;
-	margin-top: 10px;
-}
-
-div#pw_modal_info_2 input {
-margin: 5px;
-}
-</style>
-
 <script>
 	$(function() {
 		
@@ -210,13 +127,11 @@ function infoPwChk() {
  	var lgnId = $("#lgnId").val();
  	var name = $("#name").val();
  	var email = $("#pwEmail1").val() + "@" + $("#pwEmail2").val();
- 	alert(email);
  	$.post(url, {
  		lgnId : lgnId,
  		name : name,
  		email : email
  	}, function (data) {
- 		alert(data);
  		if (data == 0) {
 			// 일치하는 정보가 없습니다.
 			alert("일치하는 정보가 없습니다.");

@@ -15,7 +15,7 @@
 <link href="/pocari/res/css/header.css" rel="stylesheet">
 </head>
 <body style="margin: 0;">
-<!-- 해더 부분 시작 -->
+<!-- 해더 부분 시작1 -->
 <header>
 	<div class="header">
 		<div id="header_logo">
@@ -33,17 +33,16 @@
 						<li>|</li>
 						<li>
 							${user.name}
-							님 안녕하세요!
+							님 안녕하세요.
 						</li>
 			</ul>
 			</nav>
 					<div id="main_tool">
-			<p>새로운 이야기를 전해주세요.</p><a href="${_ctx}/sub/write">글쓰기</a>
+			<p>새로운 이야기를 전해주세요.</p><a onclick="wrapWindowByMask()">글쓰기</a>
 		</div>
 		<div id="main_search">
 			<input type="text" placeholder="검색" size="30">
-			<!-- <input type="button" value="검색"> -->
-			<button id=""> </button>
+			 <input type="button" value="검색">
 		</div>
 	</div>
 </header>
