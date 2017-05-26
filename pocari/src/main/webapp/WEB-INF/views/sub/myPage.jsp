@@ -13,7 +13,6 @@
 	})
 </script>
 <style>
-
 .user_menu {
 	list-style-type: none;
 	margin: 0;
@@ -24,14 +23,15 @@ h1, h2, p, a, span {
 	color: #fff;
 }
 
-
 .user_picture_big {
-	margin: 80px auto;
 	border: 5px solid #50597b;
 	width: 150px;
 	height: 150px;
 	border-radius: 100%;
 	overflow: hidden;
+	display: inline-block;
+	text-align: center;
+	margin-top: 50px;
 }
 
 .user_picture_small {
@@ -52,11 +52,9 @@ h1, h2, p, a, span {
 	display: block;
 	line-height: 74px;
 	font-size: 17px;
-
 }
 
 .menu_list:hover {
-
 	text-decoration: none;
 }
 
@@ -92,26 +90,24 @@ h1, h2, p, a, span {
 }
 
 .user_data {
-	margin:100px;
+	margin: 100px;
 	background: #A9A9A9;
 	border-radius: 5px;
-	width:300px;
-	height:400px;
+	width: 300px;
+	height: 400px;
 }
-
 
 .main_block {
 	margin-bottom: 25px;
 	background: #A9A9A9;
 	border-radius: 5px;
-	height:80px;
+	height: 80px;
 }
 
 .user_name {
 	margin: 25px 0 16px;
 	text-align: center;
 }
-
 
 .user_description {
 	width: 210px;
@@ -120,37 +116,95 @@ h1, h2, p, a, span {
 	font-size: 20px;
 }
 
+div#main_wrap1 {
+	width: 100%;
+	height: auto;
+	padding: 80px 0;
+	text-align: center;
+}
 
+div#main_wrap1 div.main_wrap_info1 {
+	width: 300px;
+	height: 470px;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #A9A9A9;
+	margin: 20px;
+}
+
+div#main_wrap1 div.main_wrap_info2 {
+	width: 400px;
+	height: 470px;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #A9A9A9;
+}
+
+div.table_info tr, div.table_info th, div.table_info td {
+	display: inline-block;
+}
+
+.table_info {
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	text-align: center;
+}
 </style>
 </head>
 <body>
 </head>
 
 <body>
-
-	<div class="main_container">
-		<div class="main_block">
-			<ul class="user_menu">
-				<li><a class="menu_list" href="#"><span></span>설정</a></li>
-				<li><a class="menu_list" href="#"><span></span>내가쓴글</a></li>
-			</ul>
-			<div class="user_profile">
-				<p>Me</p>
-				<div class="user_picture_small">
-					<img width="40px" alt="user" src="${_ctx}/res/img/logo.png">
+	<div>
+		<div id="main_wrap1">
+			<div class="main_block">
+				<ul class="user_menu">
+					<li><a class="menu_list" href="#"><span></span>설정</a></li>
+					<li><a class="menu_list" href="#"><span></span>내가쓴글</a></li>
+				</ul>
+				<div class="user_profile">
+					<p>Me</p>
+					<div class="user_picture_small">
+						<img width="40px" alt="user" src="${_ctx}/res/img/logo.png">
+					</div>
 				</div>
 			</div>
-		</div>
+			<div class="main_info">
 
-			<div class="user_data">
-				<div class="user_picture_big">
-					<img width="150px" alt="user" src="${_ctx}/res/img/logo.png">
-				</div>
-				<h1 class="user_name">test</h1>
-				<h1 class="user_description">안녕하세요.</h1>
+				<div class="main_wrap_info1">
+					<div class="user_picture_big">
+						<img width="150px" alt="user" src="${_ctx}/res/img/logo.png">
+					</div>
+					<h1 class="user_name">test</h1>
+					<h1 class="user_description">안녕하세요.</h1>
 				</div>
 
+
+				<div class="main_wrap_info2">
+					<table class="table_info">
+						<tr>
+							<th>아이디</th>
+							<td>id</td>
+						</tr>
+						<tr>
+							<th>이름</th>
+							<td>name</td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td>email</td>
+						</tr>
+						<tr>
+							<th>가입일</th>
+							<td>date</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
 		</div>
+	</div>
 
 	<%@ include file="../main/footer.jsp"%>
 </body>

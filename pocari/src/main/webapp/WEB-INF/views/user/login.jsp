@@ -25,6 +25,7 @@
 </script>
 <script>
 	$(function() {
+		$("#lgnId").focus();
 		$("#login_main").animate({
 			top: '18%',
 			opacity: '0.9'
@@ -58,7 +59,7 @@
 		<form action="${_ctx}/security/login" method="post" name="frm" id="frm">
 			<div id="login_title">로그인</div>
 			<div id="login_id">
-				<input type="text" name="lgnId" size="40" placeholder="Enter your ID">
+				<input type="text" name="lgnId" id="lgnId" size="40" placeholder="Enter your ID">
 			</div>
 			<br>
 			<div>
