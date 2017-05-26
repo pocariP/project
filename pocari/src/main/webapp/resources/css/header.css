@@ -101,9 +101,12 @@ div#main_search input[type="button"] {
   height: 35px;
   border:none;
   background:none;
+  background-image:url( "/pocari/res/img/search.png" );
+ 	background-size:25px 25px;
+ 	background-repeat:no-repeat;
  	position: absolute;
  	right:40px;
- 	margin:5px 10px;
+ 	margin:12px 5px;
 }
 
 

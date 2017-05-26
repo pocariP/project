@@ -42,7 +42,7 @@
 		</div>
 		<div id="main_search">
 			<input type="text" placeholder="검색" size="30">
-			 <input type="button" value="검색">
+			 <input type="button" value="">
 		</div>
 	</div>
 </header>
