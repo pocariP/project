@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page session="true" pageEncoding="UTF-8"%>
 
 <html>
@@ -150,6 +151,10 @@ div.table_info tr, div.table_info th, div.table_info td {
 	display: inline-block;
 	text-align: center;
 }
+
+.table_info th {
+	width:100px;
+}
 </style>
 </head>
 <body>
@@ -197,7 +202,7 @@ div.table_info tr, div.table_info th, div.table_info td {
 						</tr>
 						<tr>
 							<th>가입일</th>
-							<td>${user.regDt}</td>
+							<td><fmt:formatDate value="${user.regDt}" pattern="yyyy-MM-dd"/></td>
 						</tr>
 					</table>
 				</div>
