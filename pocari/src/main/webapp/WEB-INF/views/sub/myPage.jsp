@@ -185,19 +185,19 @@ div.table_info tr, div.table_info th, div.table_info td {
 					<table class="table_info">
 						<tr>
 							<th>아이디</th>
-							<td>id</td>
+							<td>${user.lgnId}</td>
 						</tr>
 						<tr>
 							<th>이름</th>
-							<td>name</td>
+							<td>${user.name}</td>
 						</tr>
 						<tr>
 							<th>이메일</th>
-							<td>email</td>
+							<td>${user.email}</td>
 						</tr>
 						<tr>
 							<th>가입일</th>
-							<td>date</td>
+							<td>${user.regDt}</td>
 						</tr>
 					</table>
 				</div>
