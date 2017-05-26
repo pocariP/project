@@ -177,11 +177,22 @@ div#modal_close img {
 
 div#modal_write_img {
 	position: absolute;
-	top: 10%;
-	bottom: 10%;
-	right: 5%;
-	left: 5%;
-	width: 35%;
-	height: 80%;
+	top: 5%;
+	bottom: 5%;
+	right: 3%;
+	left: 3%;
+	width: 60%;
+	height: 90%;
 	background-color: #444;
+}
+
+div#modal_write_text {
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	right: ;
+	left: 65%;
+	width: 30%;
+	background-color: #444;
+	height: 50%;
 }
