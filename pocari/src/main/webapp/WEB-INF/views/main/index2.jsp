@@ -33,7 +33,12 @@ function wrapWindowByMask() { // 모달창
 <body>
 	<div>
 		<div id="main_wrap">
-			<div class="main_wrap_info"></div>
+			<div class="main_wrap_info">
+				<div class="main_wrap_img">
+				</div>
+				<div class="main_wrap_view">
+				</div>
+			</div>
 		</div>
 	</div>
 <%@ include file="footer.jsp" %>

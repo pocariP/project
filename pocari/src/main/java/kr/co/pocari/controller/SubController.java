@@ -13,9 +13,4 @@ public class SubController {
 		
 	}
 	
-	
-	@RequestMapping(value="/write", method=RequestMethod.GET)
-	public void goWrite(){
-		
-	}
 }

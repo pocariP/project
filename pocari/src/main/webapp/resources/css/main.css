@@ -122,13 +122,30 @@ div#main_wrap {
 	background-color: #c0c0c0;
 	text-align: center;
 }
+
 div#main_wrap div.main_wrap_info {
 	width: 200px;
-	height: 200px;
+	height: 230px;
 	margin: 50px;
 	display: inline-block;
 	border-radius: 5px;
 	background-color: #fff;
+	box-shadow: 8px 8px 10px grey;
+}
+
+div#main_wrap div.main_wrap_info div.main_wrap_img{
+	width: 160px;
+	height: 150px;
+	background-color: #666;
+	margin: 20px 20px 0;
+}
+
+div#main_wrap div.main_wrap_info div.main_wrap_view {
+	width: 100px;
+	height: 30px;
+	background-color: #666;
+	float: right;
+	margin: 10px 20px 0 0;
 }
 
 /* ======================= index2 page (modal) ====================== */
