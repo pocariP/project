@@ -21,15 +21,6 @@ public class HomeController {
 	public String home() {	
 		return "redirect:./main/index";
 	}
-	
-	@RequestMapping(value="/main/index", method=RequestMethod.GET)
-	public void index() {
-		logger.debug("==>index page");
-	}
-	
-	@RequestMapping(value="/main/index2", method=RequestMethod.GET)
-	public void index2() {
-		logger.debug("==>main page");
-	}
+
 	
 }
