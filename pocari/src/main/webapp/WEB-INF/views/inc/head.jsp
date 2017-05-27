@@ -19,4 +19,5 @@
 <script type="text/javascript" src="${_ctx}/res/js/plugins/validate/additional-methods.js"></script>
 <script type="text/javascript" src="${_ctx}/res/js/plugins/validate/messages_ko.js"></script>
 <script type="text/javascript" src="${_ctx}/res/js/mask/jquery.meio.mask.js"></script>
+<script type="text/javascript" src="${_ctx}/res/js/jquery.form.js"></script>
 <script type="text/javascript" src="${_ctx}/res/js/main.js"></script>

@@ -12,6 +12,7 @@ $(function() {
 		e.preventDefault();
 		$("#mask, #modalWrite").hide();
 	});
+	
 });
 
 function wrapWindowByMask() { // 모달창
@@ -27,6 +28,14 @@ function wrapWindowByMask() { // 모달창
 	
 	$("#mask").fadeTo("slow", 0.8);
 	$("#modalWrite").fadeTo("slow", 1.0);
+}
+
+function addFile(obj) {
+	console.log("실행되나?");
+	var cnt = 0;
+	var fileHtml = "<input type='file' name='files' />";
+	
+	$("#append").append(fileHtml);
 }
 </script>
 </head>
@@ -47,9 +56,15 @@ function wrapWindowByMask() { // 모달창
 	<div id="mask"></div>
 	<div id="modalWrite">
 		<div id="modal_close"><img src="${_ctx}/res/img/modalClose.png"/></div>
-		<form action="#" method="post" name="modalWriteFrm" id="modalWriteFrm">
-			<div id="modal_write_img"></div>
-			<div id="modal_write_text"></div>
+		<form action="${_ctx}/doc/write" method="post" name="modalWriteFrm" id="modalWriteFrm" enctype="multipart/form-data">
+			<div id="modal_write_img">
+				<span onclick="addFile(this)">추가</span>
+				<span id="append"></span>
+			</div>
+			<div id="modal_write_text">
+				<input type="text" name="modal_write_text">
+			</div>
+			<button type="button" id="modal_write_btn">글쓰기</button>
 		</form>
 	</div>
 <!-- 글쓰기 모달창 끝 -->
