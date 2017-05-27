@@ -33,7 +33,12 @@ function wrapWindowByMask() { // 모달창
 <body>
 	<div>
 		<div id="main_wrap">
-			<div class="main_wrap_info"></div>
+			<div class="main_wrap_info">
+				<div class="main_wrap_img">
+				</div>
+				<div class="main_wrap_view">
+				</div>
+			</div>
 		</div>
 	</div>
 <%@ include file="footer.jsp" %>
@@ -42,7 +47,10 @@ function wrapWindowByMask() { // 모달창
 	<div id="mask"></div>
 	<div id="modalWrite">
 		<div id="modal_close"><img src="${_ctx}/res/img/modalClose.png"/></div>
-		글쓰기
+		<form action="#" method="post" name="modalWriteFrm" id="modalWriteFrm">
+			<div id="modal_write_img"></div>
+			<div id="modal_write_text"></div>
+		</form>
 	</div>
 <!-- 글쓰기 모달창 끝 -->
 

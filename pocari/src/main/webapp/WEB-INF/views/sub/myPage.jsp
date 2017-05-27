@@ -1,172 +1,129 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="true" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="true" pageEncoding="UTF-8" %>
 
 <html>
 <head>
-<c:import url="/WEB-INF/views/inc/head.jsp" />
-<%@ include file="../main/header2.jsp"%>
-<script>
-	$(function() {
-		$(".sub_menu>a").click(function() {
-			$(this).next("ul").toggleClass("sub_menuList");
-		})
-	})
-</script>
+ <c:import url="/WEB-INF/views/inc/head.jsp"/>
+<%@ include file="../main/header2.jsp" %>
+
 <style>
-
-.user_menu {
-	list-style-type: none;
-	margin: 0;
-	padding-left: 0;
+#user_page {
+	width:100%;
+	height:700px;
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
 }
 
-h1, h2, p, a, span {
-	color: #fff;
+#user_img img {
+	width:200px;
+	height:200px;
+	border-radius: 20%;
 }
 
-
-.user_picture_big {
-	margin: 80px auto;
-	border: 5px solid #50597b;
-	width: 150px;
-	height: 150px;
-	border-radius: 100%;
-	overflow: hidden;
+#user_profile {
+	display:inline-block;
+	padding : 27px;
 }
 
-.user_picture_small {
-	border: 2px solid #50597b;
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
+#menu_head {
+	display: inline-block;
+	width : 260px;
 }
 
-.main_container {
-	width: 100%;
-	height: 100%;
-	margin: 20px auto;
+#menu_list {
+	width:250px;
 }
-
-.menu_list {
-	padding: 0 27px;
+ #menu_head h3 {
 	display: block;
-	line-height: 74px;
-	font-size: 17px;
+    padding: 8px 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #586069;
+    background-color: #f3f5f8;
+    border-bottom: 1px solid #e1e4e8;
+} 
 
+
+#menu_list li {
+		width:230px;
+		position: relative;
+    display: block;
+    padding: 8px 10px;
+    text-align:center;
+    border-bottom: 1px solid #e1e4e8;
 }
 
-.menu_list:hover {
-
+#menu_list a{
 	text-decoration: none;
 }
 
-.menu_list .icon {
-	padding-right: 15px;
-}
-
-.user_profile {
-	float: right;
-	height: 80px;
-	padding-right: 20px;
-}
-
-.user_profile p {
-	font-size: 17px;
+#left_wrap {
 	display: inline-block;
-	line-height: 76px;
-	margin: 0;
-	padding-right: 10px;
+	width:27%;
+	margin-right:70px;
 }
 
-.user_profile a {
-	padding-left: 5px;
-}
 
-.user_profile a:hover {
-	text-decoration: none;
-}
 
-.user_picture_small {
+#mid_wrap{
 	display: inline-block;
-	vertical-align: middle;
+	width:20%;
 }
 
-.container {
-	float: left;
-	width: 300px;
+#mid_wrap h2 {
+	border-bottom: 1px solid #e1e4e8;
 }
 
-.user_data {
-	margin-left:100px;
-	background: #394264;
-	border-radius: 5px;
-	width:300px;
-	height:400px;
+#data_list li {
+	border-bottom:1px solid #e1e4e8;
+	display: inline-block;
 }
-
-
-.main_block {
-	margin-bottom: 25px;
-	background: #A9A9A9;
-	border-radius: 5px;
-	height:80px;
-}
-
-
-.middle_container {
-	margin: 0 25px;
-}
-
-
-.user_name {
-	margin: 25px 0 16px;
-	text-align: center;
-}
-
-
-.user_description {
-	width: 210px;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 20px;
-}
-
 
 </style>
 </head>
-<body>
-</head>
 
 <body>
-
-	<div class="main_container">
-		<div class="main_block">
-			<ul class="user_menu">
-				<li><a class="menu_list" href="#"><span></span>설정</a></li>
-				<li><a class="menu_list" href="#"><span></span>내가쓴글</a></li>
-			</ul>
-			<div class="user_profile">
-				<p>Me</p>
-				<div class="user_picture_small">
-					<img width="40px" alt="user" src="${_ctx}/res/img/logo.png">
+	<div id="user_page">
+	
+	
+		<div id="left_wrap">
+		<div id="user_profile">
+			<div id="user_img">
+				<img src="${_ctx}/res/img/main_img1.png"/>
+		</div>
+			<h2>${user.lgnId}</h2>
+			<hr>
+			<h2>${user.name} 님!</h2>
+		</div>
+			<div id="user_menu">
+				<nav id="menu_head">
+					<ul id="menu_list">
+						<h3>메뉴</h3>
+					<li><a href="#">회원정보 수정</a></li>
+					<li><a href="#">내가 쓴 글</a></li>
+					</ul>
+				</nav>
+			</div>
+			</div>
+			
+			<div id="mid_wrap">
+				<h2>회원 정보</h2>
+				<div id="user_data">
+					<ul id="data_list">
+					<li>아이디 : ${user.lgnId}</li>
+					<li>이름 : ${user.name}</li>
+					<li>이메일 : ${user.email}</li>
+					<li>가입일 : ${user.regDt}</li>
+					</ul>
 				</div>
 			</div>
-		</div>
 
- 		<div class="middle-container container">
-			<div class="user_data">
-				<div class="user_picture_big">
-					<img width="150px" alt="user" src="${_ctx}/res/img/logo.png">
-				</div>
-				<h1 class="user_name">test</h1>
-				<h1 class="user_description">안녕하세요.</h1>
-				</div>
-			</div> 
-		</div>
-
-	<%@ include file="../main/footer.jsp"%>
+			
+	</div>
+	<%@include file="../main/footer.jsp" %>
 </body>
-</html>
-
-
 </html>
