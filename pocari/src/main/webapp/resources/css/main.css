@@ -161,6 +161,7 @@ div#modalWrite {
 	background-color: #fff;
 	width: 80%;
 	height: 80%;
+	border-radius: 5px;	
 }
 
 div#modal_close {
@@ -186,13 +187,29 @@ div#modal_write_img {
 	background-color: #444;
 }
 
+div#modal_write_img input{
+	width: 300px;
+	height: 300px;
+	border: none;
+	background-color: red;
+}
+
 div#modal_write_text {
 	position: absolute;
 	top: 5%;
 	bottom: 5%;
-	right: ;
 	left: 65%;
-	width: 30%;
 	background-color: #444;
-	height: 50%;
+	width: 30%;
+	height: 70%;
+}
+
+button#modal_write_btn {
+	position: absolute;
+	top: 67%;
+	left: 87%;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 30px;
+	background-color: blue;
 }
