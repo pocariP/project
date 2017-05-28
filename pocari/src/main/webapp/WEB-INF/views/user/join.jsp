@@ -3,16 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
- <c:import url="/WEB-INF/views/inc/head.jsp"/>
+<c:import url="/WEB-INF/views/inc/head.jsp" />
 <script>
 	$(function() {
-		
+
 		/* index 이동 */
 		var url = "/pocari/main/index";
-		$("#member_logo").css("cursor","pointer").click(function() {
-			$(location).attr('href',url);
+		$("#member_logo").css("cursor", "pointer").click(function() {
+			$(location).attr('href', url);
 		});
-		
+
 		/* 폼 animate */
 		$("#join_main").animate({
 			top : '18%',
@@ -24,14 +24,14 @@
 			if ($(this).val() == "2") {
 				$("#email2").val("");
 				$("#email2").focus();
-			} else if($(this).val() == "1") {
+			} else if ($(this).val() == "1") {
 				$("#email2").val("");
 				$("#select_email").focus();
 			} else {
 				$("#email2").val($(this).val());
 			}
 		});
-		
+
 		/* 이메일 유효성 검사 */
 		$("#email").blur(function() {
 			var email = $("#email").val();
@@ -66,48 +66,61 @@
 				$("#emailChk").text("");
 			}
 		});
-		
+
 		/* 유효성 체크 */
 		$("#join_frm").validate();
-		
-		$("#lgnId").blur(function(){
-			var lgnId = $("#lgnId").val();
-			if(lgnId == "" || lgnId == " "){
-				alert("아이디를 입력해주세요.");
-			} else {
-			var url = "${_ctx}/user/id/available";
-				$.post(url, {lgnId : lgnId}, function(json){
-					// ID를 사용할 수 있으면 isCheckID : Y
-					if(json.code == 99){
-						$("#isCheckId").val("Y");
-						$("#idChk").text("사용할 수 있는 아이디입니다.").css("color", "green");
+
+		$("#lgnId").blur(
+				function() {
+					var lgnId = $("#lgnId").val();
+					if (lgnId == "" || lgnId == " ") {
+						alert("아이디를 입력해주세요.");
 					} else {
-						$("#idChk").text("사용할 수 없는 아이디입니다.").css("color", "red");
+						var url = "${_ctx}/user/id/available";
+						$.post(url, {
+							lgnId : lgnId
+						}, function(json) {
+							// ID를 사용할 수 있으면 isCheckID : Y
+							if (json.code == 99) {
+								$("#isCheckId").val("Y");
+								$("#idChk").text("사용할 수 있는 아이디입니다.").css(
+										"color", "green");
+							} else {
+								$("#idChk").text("사용할 수 없는 아이디입니다.").css(
+										"color", "red");
+							}
+						});
 					}
 				});
-			}
-		});
 	});
-		function joinChk() {
-			if($("#join_frm").valid()){
-					var url = "${_ctx}/user/join";
-					$.post(url, $("#join_frm").serialize(), function(data){
-						//alert(data);
-							if(data == 1) {
-								alert("회원가입에 성공하셨습니다.");
-								document.location.href="${_ctx}/user/joinSuccess";
-							} else {
-								alert("회원가입에 실패하셨습니다. 관리자에게 문의하세요.");
-								$("form").each(function(){
-										this.reset();
-								});
-							}
+	
+	function joinChk() {
+		if ($("#join_frm").valid()) {
+			var url = "${_ctx}/user/join";
+			$.post(url, $("#join_frm").serialize(), function(data) {
+				//alert(data);
+				if (data == 1) {
+					alert("회원가입에 성공하셨습니다.");
+					document.location.href = "${_ctx}/user/joinSuccess";
+				} else {
+					alert("회원가입에 실패하셨습니다. 관리자에게 문의하세요.");
+					$("form").each(function() {
+						this.reset();
 					});
-					
-			}
-			
+				}
+			});
+
 		}
 
+	}
+	
+	/* 로그인이 되있으면 못들어가게 막는 스크립트 */
+	var lgnId = '${user.lgnId}';
+	if(lgnId != '' && lgnId != null){
+	    alert("이미 로그인이 되있습니다.");
+	   location.href="${_ctx}/main/index2";
+	}
+	
 </script>
 </head>
 <body>
@@ -118,8 +131,9 @@
 			<h1>회원가입</h1>
 			<form action="#" method="post" name="join_frm" id="join_frm">
 				<div>
-					<input class="join_info" type="text" name="lgnId" id="lgnId" size="40" placeholder="아이디" maxlength="20" title="아이디를 입력해주세요." required="required">
-					<input type="hidden" id="isCheckId" value="N"/><p id="idChk"></p>
+					<input class="join_info" type="text" name="lgnId" id="lgnId" size="40" placeholder="아이디" maxlength="20" title="아이디를 입력해주세요." required="required"> <input type="hidden" id="isCheckId"
+						value="N" />
+					<p id="idChk"></p>
 				</div>
 				<div>
 					<input class="join_info" type="password" name="lgnPw" id="lgnPw" size="40" placeholder="비밀번호" minlength="4" maxlength="20" title="비밀번호를 입력해주세요." required="required">
@@ -131,10 +145,8 @@
 					<input class="join_info" type="text" name="name" size="40" placeholder="이름" maxlength="20" title="이름을 입력해주세요." required="required">
 				</div>
 				<div id="join_email">
-					<input class="join_info_email" type="text" name="email" size="8" placeholder="이메일" id="email"> @
-					<input type="hidden" value="@" name="email">
-					<input class="join_info_email" type="text" name="email" size="8" placeholder="이메일" id="email2">
-					<select id="select_email" name="select_email">
+					<input class="join_info_email" type="text" name="email" size="8" placeholder="이메일" id="email"> @ <input type="hidden" value="@" name="email"> <input class="join_info_email"
+						type="text" name="email" size="8" placeholder="이메일" id="email2"> <select id="select_email" name="select_email">
 						<option value="1">선택해주세요.</option>
 						<option value="2">직접입력</option>
 						<option value="naver.com">naver.com</option>
@@ -142,7 +154,7 @@
 						<option value="daum.com">daum.com</option>
 						<option value="nate.com">nate.com</option>
 					</select>
-					<p id="emailChk"></p> 
+					<p id="emailChk"></p>
 				</div>
 				<div id="join_btn">
 					<input type="button" value="회원가입" size="40" onclick="joinChk();">

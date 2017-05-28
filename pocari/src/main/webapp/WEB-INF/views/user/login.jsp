@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -7,23 +6,6 @@
 <c:import url="/WEB-INF/views/inc/head.jsp"/>
 <title>로그인</title>
  <script>
-	function loginChk() {
-		var form = document.frm;
-		
-		if (form.lgnId.value == "") {
-			alert("아이디를 입력해주세요.");
-			form.lgnId.focus();
-			return;
-		} else if (form.lgnPw.value == "") {
-			alert("비밀번호를 입력해주세요.");
-			form.lgnPw.focus();
-			return;
-		}
-		
-		form.submit();
-	}
-</script>
-<script>
 	$(function() {
 		$("#lgnId").focus();
 		$("#login_main").animate({
@@ -43,11 +25,35 @@
 	        }
 	    });
 	});	
+	
+	/* 로그인이 되있으면 못들어가게 막는 스크립트 */
+	var lgnId = '${user.lgnId}';
+	if(lgnId != '' && lgnId != null){
+	    alert("이미 로그인이 되있습니다.");
+	   location.href="${_ctx}/main/index2";
+	}
+	
 	<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
 		alert("${SPRING_SECURITY_LAST_EXCEPTION.message}");
 		history.pushState(null, null, location.origin + location.pathname);
 		<c:remove var = "SPRING_SECURITY_LAST_EXCEPTION" scope = "session" />
 	</c:if>
+	
+	function loginChk() {
+		var form = document.frm;
+		
+		if (form.lgnId.value == "") {
+			alert("아이디를 입력해주세요.");
+			form.lgnId.focus();
+			return;
+		} else if (form.lgnPw.value == "") {
+			alert("비밀번호를 입력해주세요.");
+			form.lgnPw.focus();
+			return;
+		}
+		
+		form.submit();
+	}
 
 </script>
 

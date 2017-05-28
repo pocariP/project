@@ -30,7 +30,7 @@ header#header1:hover {
 	opacity: 0.9;
 }
 
-#header_meun, ul, li {
+#header_meun, #header_meun ul, #header_meun li {
 	list-style: none;
 	float: right;
 }
@@ -39,7 +39,7 @@ a, #header_meun, #header_logo {
 	display: inline-block;
 }
 
-nav#header_meun, ul, li {
+nav#header_meun, nav#header_meun ul, nav#header_meun li {
 	margin: 5px 10px 5px;
 }
 
@@ -68,7 +68,7 @@ a, #main_meun, #header_logo {
 nav#main_meun {
 	margin: 15px 20px;
 }
-#main_meun, ul, li {
+#main_meun, #main_meun ul, #main_meun li {
 	list-style: none;
 	float: right;
 	margin: 5px 4px;
